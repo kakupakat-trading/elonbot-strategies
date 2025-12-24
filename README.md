@@ -15,6 +15,7 @@ This repository provides an informational overview of the backtesting and report
 ## Methodology (high level)
 - Historical candles are downloaded via CCXT for each pair and timeframe.
 - Results are evaluated with standard performance and risk metrics (ROI, PF, Max DD, Winrate, etc.).
+- All data shown is unleveraged (1x).
 - Each report indicates whether SL and TP were calculated by Percentage or by ATR 14,3.
 - We use 4 TPs: you can close everything at TP1 or, if you prefer, use all four TPs with partial exits of 50%, 25%, 15%, and 10%.
 

@@ -15,6 +15,7 @@ Este repositorio documenta de forma informativa el flujo de backtesting y report
 ## Metodología (alto nivel)
 - Se descargan velas históricas vía CCXT para cada par y timeframe.
 - Se evalúan resultados con métricas estándar de rendimiento y riesgo (ROI, PF, Max DD, Winrate, etc.).
+- All data shown is unleveraged (1x).
 - Cada reporte indica si el SL y TP fueron calculados por Porcentaje o por ATR 14,3.
 - Usamos 4 TPs: puedes operar cerrando todo en el TP1 o, si prefieres, usar los cuatro TPs con cierres parciales de 50%, 25%, 15% y 10%.
 
