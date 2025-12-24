@@ -59,3 +59,5 @@ Reportes HTML por temporalidad:
 
 Prueba sin costo: https://t.me/VIP_Agent_bot?start=m_hEkkwYo
 Canal oficial: https://t.me/kakupakat_trading_oficial
+
+#tradingview #indicator #algo #tradingview-strategy #strategy #code #pinescript #crypto #bitcoin #download #telegram #predictum #ggshot
