@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Backtesting & Reports Overview</title>
+
+<style>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 15px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    padding: 25px;
+    margin-bottom: 30px;
+    border: 1px solid #e9ecef;
+}
+
+h1 {
+    margin: 0;
+    font-weight: 600;
+}
+
+h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+h3 {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+.metric-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.metric-box {
+    background: #f1f3f5;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.badge {
+    display: inline-block;
+    background: #3498db;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-right: 8px;
+}
+
+.link-box {
+    background: #e8f6f3;
+    padding: 15px;
+    border-left: 5px solid #2ecc71;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>📊 Backtesting & Reporting Framework</h1>
+    <p>Deep historical validation · Risk metrics · Tier-1 strategy selection</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>📘 Introduction</h2>
+        <ul>
+            <li>Backtests are executed per pair and timeframe using a minimum of <strong>40,000 candles</strong>.</li>
+            <li>Millions of internal indicator combinations are explored.</li>
+            <li>Only configurations meeting strict <strong>ROI</strong> and <strong>Profit Factor</strong> targets are selected.</li>
+            <li>Only <strong>Tier-1 grade</strong> results are retained.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🎯 Objective</h2>
+        <ul>
+            <li>Validate strategies using long historical samples.</li>
+            <li>Ensure comparable metrics across coins and timeframes.</li>
+            <li>Continuously refine the strategy universe.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🧠 Methodology (High Level)</h2>
+        <ul>
+            <li>Historical data is downloaded via <strong>CCXT</strong>.</li>
+            <li>Each run is evaluated using ROI, PF, Max Drawdown, Winrate, and accuracy trends.</li>
+            <li>Reports clearly specify whether SL/TP are calculated by <strong>Percentage</strong> or <strong>ATR (14,3)</strong>.</li>
+            <li>Four Take-Profits are supported:
+                <ul>
+                    <li>TP1: Full exit</li>
+                    <li>Or partial exits: 50% / 25% / 15% / 10%</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>⚙️ Workflow</h2>
+        <ul>
+            <li>Prepared strategies are consumed by the backtesting engine.</li>
+            <li>Raw results are exported to:
+                <code>backtesting/resultado_backtest.csv</code>
+            </li>
+            <li>An HTML report is generated in <code>report_html/</code> containing:
+                <ul>
+                    <li><strong>index.html</strong> – global table & charts</li>
+                    <li><strong>images/</strong> – ROI & accuracy charts</li>
+                    <li><strong>details/</strong> – per-coin deep dives</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>📂 Folder Structure</h2>
+        <div class="metric-grid">
+            <div class="metric-box">
+                <h3>Timeframes</h3>
+                <p><code>TF_5m</code>, <code>TF_15m</code>, <code>TF_30m</code></p>
+            </div>
+            <div class="metric-box">
+                <h3>Backtesting</h3>
+                <p><code>backtesting/</code></p>
+            </div>
+            <div class="metric-box">
+                <h3>Reports</h3>
+                <p><code>report_html/</code></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>⏱ Estimated Time</h2>
+        <ul>
+            <li>~3 hours per coin for solid strategy validation.</li>
+            <li>Up to 6 hours for high-complexity combinations.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🔗 Links</h2>
+        <div class="link-box">
+            🤖 <strong>Free Trial:</strong>
+            <a href="https://t.me/VIP_Agent_bot?start=m_hEkkwYo" target="_blank">
+                https://t.me/VIP_Agent_bot
+            </a>
+        </div>
+        <div class="link-box">
+            📢 <strong>Official Channel:</strong>
+            <a href="https://t.me/kakupakat_trading_oficial" target="_blank">
+                https://t.me/kakupakat_trading_oficial
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    © Backtesting & Strategy Research · Generated for GitHub Pages
+</div>
+
+</body>
+</html>
+
