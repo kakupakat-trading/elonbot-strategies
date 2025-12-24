@@ -34,6 +34,24 @@ Este repositorio documenta de forma informativa el flujo de backtesting y report
 - TF_15m
 - TF_30m
 
+## Páginas de estrategias
+Reportes HTML por temporalidad:
+
+### TF_5m
+- Carpeta: `TF_5m/`
+- Reporte: https://kakupakat-trading.github.io/elonbot-strategies/TF_5m/
+- Notas: _Agrega resumen o conclusiones aquí._
+
+### TF_15m
+- Carpeta: `TF_15m/`
+- Reporte: https://kakupakat-trading.github.io/elonbot-strategies/TF_15m/
+- Notas: _Agrega resumen o conclusiones aquí._
+
+### TF_30m
+- Carpeta: `TF_30m/`
+- Reporte: https://kakupakat-trading.github.io/elonbot-strategies/TF_30m/
+- Notas: _Agrega resumen o conclusiones aquí._
+
 ## Tiempos estimados
 - Aunque se puede escanear todo el mercado, cada moneda tarda ~3 horas en obtener un resultado útil para armar la estrategia.
 - En ocasiones puede tardar hasta 6 horas por la cantidad de combinaciones evaluadas.

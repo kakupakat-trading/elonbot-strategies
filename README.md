@@ -34,6 +34,24 @@ This repository provides an informational overview of the backtesting and report
 - TF_15m
 - TF_30m
 
+## Strategy pages
+Live HTML reports by timeframe:
+
+### TF_5m
+- Folder: `TF_5m/`
+- Report: https://kakupakat-trading.github.io/elonbot-strategies/TF_5m/
+- Notes: _Add summary or key takeaways here._
+
+### TF_15m
+- Folder: `TF_15m/`
+- Report: https://kakupakat-trading.github.io/elonbot-strategies/TF_15m/
+- Notes: _Add summary or key takeaways here._
+
+### TF_30m
+- Folder: `TF_30m/`
+- Report: https://kakupakat-trading.github.io/elonbot-strategies/TF_30m/
+- Notes: _Add summary or key takeaways here._
+
 ## Estimated time
 - Although we can scan the whole market, each coin takes ~3 hours to reach a solid result for building the strategy.
 - Sometimes it can take up to 6 hours due to the number of combinations evaluated.

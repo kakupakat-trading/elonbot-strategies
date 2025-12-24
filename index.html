@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Backtesting & Reports Overview</title>
 
 <style>
@@ -9,19 +10,28 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
-    color: #343a40;
+    background-color: #f4f7fb;
+    color: #2b2f33;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 header {
     background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
     color: white;
-    padding: 2.5rem;
+    padding: 3rem 1.5rem;
     text-align: center;
 }
 
+header p {
+    max-width: 720px;
+    margin: 0.75rem auto 0;
+    font-size: 1.05rem;
+    opacity: 0.9;
+}
+
 .container {
-    max-width: 1200px;
+    max-width: 1080px;
     margin: 2rem auto;
     padding: 0 15px;
 }
@@ -30,7 +40,7 @@ header {
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    padding: 25px;
+    padding: 28px;
     margin-bottom: 30px;
     border: 1px solid #e9ecef;
 }
@@ -38,6 +48,7 @@ header {
 h1 {
     margin: 0;
     font-weight: 600;
+    font-size: 2.1rem;
 }
 
 h2 {
@@ -45,21 +56,28 @@ h2 {
     border-bottom: 2px solid #3498db;
     padding-bottom: 10px;
     margin-bottom: 20px;
-    font-size: 1.5rem;
+    font-size: 1.45rem;
 }
 
 h3 {
     color: #555;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     margin-bottom: 10px;
 }
 
 ul {
     padding-left: 20px;
+    margin: 0;
 }
 
 li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+code {
+    background: #f1f3f5;
+    padding: 2px 6px;
+    border-radius: 4px;
 }
 
 .metric-grid {
@@ -73,6 +91,25 @@ li {
     padding: 20px;
     border-radius: 8px;
     border: 1px solid #e9ecef;
+}
+
+.strategy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+}
+
+.strategy-card {
+    background: #f8fbff;
+    border: 1px solid #dbe7f5;
+    border-radius: 10px;
+    padding: 18px;
+}
+
+.strategy-card a {
+    display: inline-block;
+    margin-top: 6px;
+    font-weight: 600;
 }
 
 .badge {
@@ -122,6 +159,33 @@ a:hover {
 <div class="container">
 
     <div class="card">
+        <h2>✅ Available Strategies</h2>
+        <div class="strategy-grid">
+            <div class="strategy-card">
+                <h3>TF_5m</h3>
+                <p>5-minute timeframe report and performance tables.</p>
+                <a href="https://kakupakat-trading.github.io/elonbot-strategies/TF_5m/" target="_blank">
+                    Open report →
+                </a>
+            </div>
+            <div class="strategy-card">
+                <h3>TF_15m</h3>
+                <p>15-minute timeframe report with detailed metrics.</p>
+                <a href="https://kakupakat-trading.github.io/elonbot-strategies/TF_15m/" target="_blank">
+                    Open report →
+                </a>
+            </div>
+            <div class="strategy-card">
+                <h3>TF_30m</h3>
+                <p>30-minute timeframe report and coin-level breakdowns.</p>
+                <a href="https://kakupakat-trading.github.io/elonbot-strategies/TF_30m/" target="_blank">
+                    Open report →
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
         <h2>📘 Introduction</h2>
         <ul>
             <li>Backtests are executed per pair and timeframe using a minimum of <strong>40,000 candles</strong>.</li>
@@ -149,7 +213,7 @@ a:hover {
             <li>Four Take-Profits are supported:
                 <ul>
                     <li>TP1: Full exit</li>
-                    <li>Or partial exits: 50% / 25% / 15% / 10%</li>
+                    <li>Or partial exits: TP1) 50% / TP2) 25% / TP3) 15% / TP4) 10%</li>
                 </ul>
             </li>
         </ul>
@@ -195,6 +259,7 @@ a:hover {
         <ul>
             <li>~3 hours per coin for solid strategy validation.</li>
             <li>Up to 6 hours for high-complexity combinations.</li>
+            <li>Time estimates are per coin; we plan to include all pairs in the coming months (approx. 538).</li>
         </ul>
     </div>
 
@@ -222,4 +287,3 @@ a:hover {
 
 </body>
 </html>
-
