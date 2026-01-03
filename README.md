@@ -57,6 +57,14 @@ Live HTML reports by timeframe:
 - Although we can scan the whole market, each coin takes ~3 hours to reach a solid result for building the strategy.
 - Sometimes it can take up to 6 hours due to the number of combinations evaluated.
 
+## Atlas AI Framework
+Atlas AI is not just a simple indicator bot; it is a hybrid quantitative decision engine that combines advanced technical modeling with Artificial Intelligence validation. It operates in four critical stages:
+
+1. **Market Scanning (The Scanner)**: The system monitors Binance Futures in real-time, applying dynamic filters to isolate high-liquidity assets and discard dead or susceptible markets.
+2. **The Mathematical Engine**: This is where the proprietary logic resides. The algorithm utilizes multi-factor statistical modeling and momentum coherence analysis to detect high-probability market anomalies, distinguishing genuine structural moves from market noise and "fake-outs."
+3. **AI Validation (The Brain)**: This is the game-changer. Once the quantitative model detects a potential signal, it is sent to an LLM (Large Language Model) Validation module. The AI analyzes the full market context to approve or reject the trade, acting as a senior risk manager that filters out false positives.
+4. **Execution & Transparency**: If the AI approves the trade, Atlas calculates dynamic risk parameters based on real-time volatility (adaptive sizing) and broadcasts the trade to our channels, ensuring total transparency.
+
 Free trial: https://t.me/VIP_Agent_bot?start=m_hEkkwYo
 Official channel: https://t.me/kakupakat_trading_oficial
 

@@ -57,6 +57,14 @@ Reportes HTML por temporalidad:
 - Aunque se puede escanear todo el mercado, cada moneda tarda ~3 horas en obtener un resultado útil para armar la estrategia.
 - En ocasiones puede tardar hasta 6 horas por la cantidad de combinaciones evaluadas.
 
+## Framework Atlas AI
+Atlas AI no es solo un simple bot de indicadores; es un motor de decisión cuantitativa híbrido que combina modelado técnico avanzado con validación de Inteligencia Artificial. Opera en cuatro etapas críticas:
+
+1. **Escaneo de Mercado (The Scanner)**: El sistema monitorea Binance Futures en tiempo real, aplicando filtros dinámicos para aislar activos de alta liquidez y descartar mercados muertos o susceptibles.
+2. **El Motor Matemático (The Mathematical Engine)**: Aquí reside la lógica propietaria. El algoritmo utiliza modelado estadístico multifactorial y análisis de coherencia de momentum para detectar anomalías de mercado de alta probabilidad, distinguiendo movimientos estructurales genuinos del ruido de mercado y "falsas rupturas".
+3. **Validación por IA (The Brain)**: Este es el cambio de juego. Una vez que el modelo cuantitativo detecta una señal potencial, se envía a un módulo de Validación LLM (Modelo de Lenguaje Grande). La IA analiza el contexto completo del mercado para aprobar o rechazar la operación, actuando como un gestor de riesgo senior que filtra falsos positivos.
+4. **Ejecución y Transparencia**: Si la IA aprueba la operación, Atlas calcula parámetros de riesgo dinámicos basados en la volatilidad en tiempo real (tamaño adaptativo) y transmite la operación a nuestros canales, asegurando total transparencia.
+
 Prueba sin costo: https://t.me/VIP_Agent_bot?start=m_hEkkwYo
 Canal oficial: https://t.me/kakupakat_trading_oficial
 
