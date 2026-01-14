@@ -1,0 +1,171 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>RAREUSDT - Details</title>
+        
+<style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #343a40; }
+    header { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 2rem; text-align: center; }
+    .container { max-width: 1250px; margin: 2rem auto; padding: 0 15px; }
+    .card { background: white; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); padding: 20px; margin-bottom: 30px; border: 1px solid #e9ecef; }
+    h1 { margin: 0; font-weight: 600; }
+    h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; margin-bottom: 20px; font-size: 1.5rem; }
+    h3 { color: #555; font-size: 1.1rem; margin-bottom: 15px; }
+    
+    /* TABLE */
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.95rem; }
+    th { background-color: #34495e; color: #fff; padding: 12px; text-align: left; font-weight: 500; }
+    td { padding: 12px; border-bottom: 1px solid #dee2e6; vertical-align: middle; }
+    tr:nth-child(even) { background-color: #f8f9fa; }
+    tr:hover { background-color: #e9ecef; transition: 0.2s; }
+    
+    /* COLORS */
+    .positive { color: #27ae60; font-weight: bold; }
+    .negative { color: #e74c3c; font-weight: bold; }
+    
+    /* BUTTONS */
+    .btn { display: inline-block; padding: 8px 15px; background-color: #3498db; color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem; transition: background 0.2s; }
+    .btn:hover { background-color: #2980b9; }
+    .back-link { display: inline-block; margin-bottom: 20px; color: #3498db; text-decoration: none; font-weight: 500; }
+    
+    /* METRICS GRID */
+    .metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; }
+    .metric-box { background: #f1f3f5; padding: 15px; border-radius: 8px; text-align: center; border: 1px solid #e9ecef; }
+    .metric-value { font-size: 1.4rem; font-weight: 700; color: #2c3e50; }
+    .metric-label { font-size: 0.85rem; color: #6c757d; margin-top: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    /* ACCURACY LIST */
+    .accuracy-list { list-style: none; padding: 0; }
+    .accuracy-item { background: #e8f6f3; padding: 15px; margin-bottom: 10px; border-radius: 6px; border-left: 5px solid #2ecc71; font-size: 1.1rem; color: #2c3e50; }
+    
+    /* IMAGES */
+    .chart-container { text-align: center; padding: 10px; }
+    img { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #dee2e6; }
+</style>
+
+    </head>
+    <body>
+        <header>
+            <h1>Strategy: RAREUSDT</h1>
+            <p>Coins: 218</p>
+            <p>Timeframe: 30m</p>
+        </header>
+        <div class="container">
+            <a href="../index.html" class="back-link">← Back to Dashboard</a>
+            
+            <div class="card">
+                <h2>🎯 Accuracy (Recent Signals)</h2>
+                <ul class="accuracy-list">
+                    <li class="accuracy-item">50 recent signals: 58.00% 📈 accuracy</li>
+                    <li class="accuracy-item">25 recent signals: 56.00% 📈 accuracy</li>
+                    <li class="accuracy-item">15 recent signals: 53.33% 📈 accuracy</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>📊 All Metrics</h2>
+                <div class="metric-grid">
+                    
+            <div class="metric-box">
+                <div class="metric-value">30m</div>
+                <div class="metric-label">Interval</div>
+            </div>
+            
+            <div class="metric-box">
+                <div class="metric-value">ATR</div>
+                <div class="metric-label">Calc_Mode</div>
+            </div>
+            
+            <div class="metric-box">
+                <div class="metric-value">40,000 candles (2.3 years (833 days))</div>
+                <div class="metric-label">Candles for Backtesting</div>
+            </div>
+            
+            <div class="metric-box">
+                <div class="metric-value">67.50%</div>
+                <div class="metric-label">Winrate</div>
+            </div>
+            
+            <div class="metric-box">
+                <div class="metric-value">1.4</div>
+                <div class="metric-label">PF</div>
+            </div>
+            
+            <div class="metric-box">
+                <div class="metric-value">54.51%</div>
+                <div class="metric-label">ROI</div>
+            </div>
+            
+            <div class="metric-box">
+                <div class="metric-value">29.08%</div>
+                <div class="metric-label">Max_DD</div>
+            </div>
+            
+            <div class="metric-box">
+                <div class="metric-value">80</div>
+                <div class="metric-label">Total Trades</div>
+            </div>
+            
+            <div class="metric-box">
+                <div class="metric-value">4.49%</div>
+                <div class="metric-label">Avg_Max_Profit</div>
+            </div>
+            
+            <div class="metric-box">
+                <div class="metric-value">-2.77%</div>
+                <div class="metric-label">Avg_Drawdown</div>
+            </div>
+            
+            <div class="metric-box">
+                <div class="metric-value">0.12</div>
+                <div class="metric-label">Avg_RR</div>
+            </div>
+            
+            <div class="metric-box">
+                <div class="metric-value">56.00%</div>
+                <div class="metric-label">T1_Acc_25</div>
+            </div>
+            
+            <div class="metric-box">
+                <div class="metric-value">20.00%</div>
+                <div class="metric-label">T2_Acc_25</div>
+            </div>
+            
+            <div class="metric-box">
+                <div class="metric-value">8.00%</div>
+                <div class="metric-label">T3_Acc_25</div>
+            </div>
+            
+            <div class="metric-box">
+                <div class="metric-value">8.00%</div>
+                <div class="metric-label">T4_Acc_25</div>
+            </div>
+            
+            <div class="metric-box">
+                <div class="metric-value">67.50%</div>
+                <div class="metric-label">T1_Prob_Cum</div>
+            </div>
+            
+            <div class="metric-box">
+                <div class="metric-value">25.00%</div>
+                <div class="metric-label">T2_Prob_Cum</div>
+            </div>
+            
+            <div class="metric-box">
+                <div class="metric-value">17.50%</div>
+                <div class="metric-label">T3_Prob_Cum</div>
+            </div>
+            
+            <div class="metric-box">
+                <div class="metric-value">12.50%</div>
+                <div class="metric-label">T4_Prob_Cum</div>
+            </div>
+            
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
+    
