@@ -13,11 +13,32 @@ Este repositorio documenta de forma informativa el flujo de backtesting y report
 - Generar resultados comparables entre monedas y timeframes para construir y refinar la estrategia.
 
 ## Metodología (alto nivel)
+- **🛡️ ¿Por qué una Estrategia Universal?** Aplicamos parámetros idénticos a todos los activos para prevenir el sobreajuste (overfitting). Una estrategia que funciona consistentemente en diversos mercados captura la verdadera dinámica del mercado en lugar de memorizar el ruido histórico, asegurando mayor robustez y fiabilidad en el trading en vivo.
 - Se descargan velas históricas vía CCXT para cada par y timeframe.
 - Se evalúan resultados con métricas estándar de rendimiento y riesgo (ROI, PF, Max DD, Winrate, etc.).
 - All data shown is unleveraged (1x).
 - Cada reporte indica si el SL y TP fueron calculados por Porcentaje o por ATR 14,3.
-- Usamos 4 TPs: puedes operar cerrando todo en el TP1 o, si prefieres, usar los cuatro TPs con cierres parciales de 50%, 25%, 15% y 10%.
+- Usamos **5 TPs**:
+  - TP1-TP4: Aseguran ganancias incrementalmente (20% cada uno).
+  - **TP5 es nuestro 'Moonbag':** Diseñado para capturar movimientos parabólicos y tendencias extendidas. Al mantener esta porción final activa, la estrategia permanece expuesta a posibles "home runs" sin arriesgar las ganancias ya aseguradas en los TPs anteriores.
+
+## 🏆 Métrica Score
+Un valor único que refleja el rendimiento general de la estrategia en tu timeframe seleccionado.
+
+Cuanto mayor sea el Score, más estable y fiable es la estrategia en este timeframe.
+Perfecto para comparar rápidamente timeframes y encontrar las mejores configuraciones.
+
+**FÓRMULA:**
+
+Score = ((Profit + 100) / 100) × Winrate² × log(1 + Trades)
+
+Donde:
+- **Profit** — beneficio total en todos los TPs
+- **Winrate²** — precisión al cuadrado (porque la consistencia gana)
+- **log(1 + Trades)** — logaritmo del total de operaciones (no se permite suerte en 2 operaciones)
+
+El resultado:
+Alto Beneficio + Winrate Estable + Trading Activo = **MAX SCORE 🏆**
 
 ## Flujo de trabajo
 - El motor de backtesting consume la lista de estrategias preparada internamente, ejecuta simulaciones históricas y genera el CSV en `backtesting/resultado_backtest.csv`.

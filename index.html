@@ -252,6 +252,10 @@
         <div class="card">
             <h2>🧠 Methodology (High Level)</h2>
             <ul>
+                <li><strong>🛡️ Why a Universal Strategy?</strong> We apply identical parameters across all assets to
+                    prevent overfitting. A strategy that performs consistently across diverse markets captures true
+                    market dynamics rather than just memorizing historical noise, ensuring greater robustness and
+                    reliability in live trading.</li>
                 <li>Historical data is downloaded via <strong>CCXT</strong>.</li>
                 <li>Each run is evaluated using ROI, PF, Max Drawdown, Winrate, and accuracy trends.</li>
                 <li>All data shown is unleveraged (1x).</li>
@@ -261,13 +265,35 @@
                     is reached.</li>
                 <li><strong>Important:</strong> You must always use a Stop Loss in your position; never use an imaginary
                     SL.</li>
-                <li>Four Take-Profits are supported:
+                <li><strong>Five Take-Profits</strong> are supported:
                     <ul>
-                        <li>TP1: Full exit</li>
-                        <li>Or partial exits: TP1) 50% / TP2) 25% / TP3) 15% / TP4) 10%</li>
+                        <li>TP1 to TP4: Secure profits incrementally (20% each).</li>
+                        <li><strong>TP5 (The Moonbag):</strong> The final 20% is reserved to capture extended parabolic
+                            runs. This ensures we don't exit too early during massive breakout events, maximizing upside
+                            potential while having already secured profits with the first 4 TPs.</li>
                     </ul>
                 </li>
             </ul>
+        </div>
+
+        <div class="card">
+            <h2>🏆 The New Meta: Score Metric</h2>
+            <p>A single value that reflects the overall strategy performance on your selected timeframe.</p>
+            <p>The higher the Score — the more stable and reliable the strategy is on this timeframe. Perfect for
+                quickly comparing timeframes and finding the best setups.</p>
+
+            <h3>Formula:</h3>
+            <p><code>Score = ((Profit + 100) / 100) × Winrate² × log(1 + Trades)</code></p>
+
+            <h3>Where:</h3>
+            <ul>
+                <li><strong>Profit</strong> — total profit across all TPs</li>
+                <li><strong>Winrate²</strong> — accuracy squared (because consistency wins)</li>
+                <li><strong>log(1 + Trades)</strong> — logarithm of total trades (no luck on 2 trades allowed)</li>
+            </ul>
+
+            <p><strong>The result:</strong> High Profit + Stable Winrate + Active Trading = <strong>MAX SCORE
+                    🏆</strong></p>
         </div>
 
         <div class="card">

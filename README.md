@@ -13,11 +13,32 @@ This repository provides an informational overview of the backtesting and report
 - Produce comparable results across coins and timeframes to build and refine the strategy.
 
 ## Methodology (high level)
+- **🛡️ Why a Universal Strategy?** We apply identical parameters across all assets to prevent overfitting. A strategy that performs consistently across diverse markets captures true market dynamics rather than just memorizing historical noise, ensuring greater robustness and reliability in live trading.
 - Historical candles are downloaded via CCXT for each pair and timeframe.
 - Results are evaluated with standard performance and risk metrics (ROI, PF, Max DD, Winrate, etc.).
 - All data shown is unleveraged (1x).
 - Each report indicates whether SL and TP were calculated by Percentage or by ATR 14,3.
-- We use 4 TPs: you can close everything at TP1 or, if you prefer, use all four TPs with partial exits of 50%, 25%, 15%, and 10%.
+- We use **5 TPs**:
+  - TP1-TP4: Secure profits incrementally (20% each).
+  - **TP5 is our 'Moonbag':** Designed to catch outlier moves and parabolic trends. By keeping this final portion active, the strategy remains exposed to potential "home runs" without risking the secured gains from earlier TPs.
+
+## 🏆 Score Metric
+A single value that reflects the overall strategy performance on your selected timeframe.
+
+The higher the Score — the more stable and reliable the strategy is on this timeframe.
+Perfect for quickly comparing timeframes and finding the best setups.
+
+**FORMULA:**
+
+Score = ((Profit + 100) / 100) × Winrate² × log(1 + Trades)
+
+Where:
+- **Profit** — total profit across all TPs
+- **Winrate²** — accuracy squared (because consistency wins)
+- **log(1 + Trades)** — logarithm of total trades (no luck on 2 trades allowed)
+
+The result:
+High Profit + Stable Winrate + Active Trading = **MAX SCORE 🏆**
 
 ## Workflow
 - The backtesting engine consumes the internally prepared strategy list, runs historical simulations, and outputs the CSV at `backtesting/resultado_backtest.csv`.
